@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7k1k"]
 size = Vector2(208, 176)
 
-[node name="terrain" type="Area2D"]
+[node name="terrain" type="Area2D" groups=["terrain"]]
 script = ExtResource("1_oqplg")
 terrain = "gravel"
 

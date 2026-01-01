@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	if terrain == "normal" or terrain == null:
 		pass
 	if terrain == "gravel":
-		position.y -= 1
+		position.y += 0.25
 	if Input.is_action_pressed("left_mouse"):
 		if mouse != null:
 			anchored = false
@@ -26,8 +26,6 @@ func _process(delta: float) -> void:
 		anchored = true
 	if anchored == true:
 		anchored_position = position
-	else:
-		print("Está suelto")
 		
 func follow_mouse(mouse_position):
 	position = mouse_position

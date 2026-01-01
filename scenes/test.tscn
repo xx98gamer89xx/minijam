@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkhwetnfuxlmh"]
+[gd_scene load_steps=5 format=3 uid="uid://dkhwetnfuxlmh"]
 
 [ext_resource type="PackedScene" uid="uid://dwl51glne5y07" path="res://scenes/mouse_node.tscn" id="1_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://dldpvh3xlydmt" path="res://scenes/piolet.tscn" id="2_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://cuavcnbx8t6p" path="res://scenes/character_center.tscn" id="3_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://px1xiu4f1tbr" path="res://scenes/terrain.tscn" id="4_74lek"]
 
 [node name="test" type="Node2D"]
 
@@ -16,3 +17,5 @@ position = Vector2(363, 394)
 
 [node name="piolet2" parent="." instance=ExtResource("2_6uqi0")]
 position = Vector2(439, 321)
+
+[node name="terrain" parent="." instance=ExtResource("4_74lek")]
