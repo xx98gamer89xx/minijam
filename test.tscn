@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkhwetnfuxlmh"]
+
+[ext_resource type="PackedScene" uid="uid://dwl51glne5y07" path="res://mouse_node.tscn" id="1_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://dldpvh3xlydmt" path="res://piolet.tscn" id="2_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://cuavcnbx8t6p" path="res://character_center.tscn" id="3_6uqi0"]
+
+[node name="test" type="Node2D"]
+
+[node name="mouse_node" parent="." instance=ExtResource("1_8uh7m")]
+
+[node name="piolet" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(290, 333)
+
+[node name="character_center" parent="." instance=ExtResource("3_6uqi0")]
+position = Vector2(363, 394)
+
+[node name="piolet2" parent="." instance=ExtResource("2_6uqi0")]
+position = Vector2(439, 321)
