@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dldpvh3xlydmt"]
 
-[ext_resource type="Script" uid="uid://b27kohkrxvxcl" path="res://piolet.gd" id="1_xcfou"]
-[ext_resource type="Texture2D" uid="uid://b6ojf86cy6g7o" path="res://icon.svg" id="2_ylelw"]
+[ext_resource type="Script" uid="uid://b27kohkrxvxcl" path="res://scripts/piolet.gd" id="1_xcfou"]
+[ext_resource type="Texture2D" uid="uid://b6ojf86cy6g7o" path="res://sprites/icon.svg" id="2_ylelw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5a0b6"]
 radius = 20.0

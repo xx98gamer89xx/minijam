@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://px1xiu4f1tbr"]
 
-[ext_resource type="Script" uid="uid://2tparw1x8eq0" path="res://terrain.gd" id="1_0u6kl"]
-[ext_resource type="Texture2D" uid="uid://b6ojf86cy6g7o" path="res://icon.svg" id="2_avahw"]
+[ext_resource type="Script" uid="uid://2tparw1x8eq0" path="res://scripts/terrain.gd" id="1_oqplg"]
+[ext_resource type="Texture2D" uid="uid://b6ojf86cy6g7o" path="res://sprites/icon.svg" id="2_vjhlg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7k1k"]
 size = Vector2(208, 176)
 
 [node name="terrain" type="Area2D"]
-script = ExtResource("1_0u6kl")
+script = ExtResource("1_oqplg")
 terrain = "gravel"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -15,4 +15,4 @@ shape = SubResource("RectangleShape2D_n7k1k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.640625, 1.375)
-texture = ExtResource("2_avahw")
+texture = ExtResource("2_vjhlg")
