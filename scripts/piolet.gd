@@ -5,7 +5,10 @@ var player
 var anchored
 var anchored_position
 var terrain
+var fixed
+@export var direction: int
 func _ready() -> void:
+	fixed = true
 	anchored_position = position
 	anchored = true
 	for node in get_parent().get_children():
@@ -13,12 +16,14 @@ func _ready() -> void:
 			player = node
 
 func _process(delta: float) -> void:
+	$Sprite2D.scale.x = direction
 	if terrain == "normal" or terrain == null:
 		pass
 	if terrain == "gravel":
 		position.y += 0.25
 	if Input.is_action_pressed("left_mouse"):
 		if mouse != null:
+			mouse.picked = true
 			anchored = false
 			if mouse.position.distance_to(player.position) < player.arm_length * 1.35 and mouse.position.distance_to(player.position) > 90:
 				follow_mouse(mouse.position)
@@ -32,11 +37,13 @@ func follow_mouse(mouse_position):
 
 func _on_mouse_collision_area_entered(area: Area2D) -> void:
 	if area.is_in_group("mouse"):
-		mouse = area
+		if area.picked == false:
+			mouse = area
 
 
 func _on_mouse_collision_area_exited(area: Area2D) -> void:
 	if area.is_in_group("mouse"):
+		area.picked = false
 		mouse = null
 
 func _on_piolet_collision_area_exited(area: Area2D) -> void:

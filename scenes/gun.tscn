@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk2bltekpub8b"]
+
+[ext_resource type="Script" uid="uid://bsjy6yu6smfgs" path="res://scenes/gun.gd" id="1_og67c"]
+[ext_resource type="Texture2D" uid="uid://d2uhi5ig0fclk" path="res://sprites/Gun.png" id="1_x77fm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og67c"]
+size = Vector2(57, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp1hk"]
+size = Vector2(58, 22)
+
+[node name="Gun" type="RigidBody2D" groups=["Collectable"]]
+collision_layer = 2
+script = ExtResource("1_og67c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_og67c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -1.9073486e-06)
+scale = Vector2(2.1171875, 2.1171875)
+texture = ExtResource("1_x77fm")
+
+[node name="mouse_collision" type="Area2D" parent="." groups=["Collectable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse_collision"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_gp1hk")
+
+[connection signal="area_entered" from="mouse_collision" to="." method="_on_mouse_collision_area_entered"]
+[connection signal="area_exited" from="mouse_collision" to="." method="_on_mouse_collision_area_exited"]

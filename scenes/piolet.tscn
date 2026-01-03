@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dldpvh3xlydmt"]
 
 [ext_resource type="Script" uid="uid://b27kohkrxvxcl" path="res://scripts/piolet.gd" id="1_xcfou"]
-[ext_resource type="Texture2D" uid="uid://b6ojf86cy6g7o" path="res://sprites/icon.svg" id="2_ylelw"]
+[ext_resource type="Texture2D" uid="uid://b27501yrjobte" path="res://sprites/piolet.png" id="2_36es6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5a0b6"]
 radius = 20.0
@@ -16,6 +16,7 @@ radius = 18.0
 height = 70.0
 
 [node name="piolet" type="RigidBody2D" groups=["piolet"]]
+collision_layer = 2
 gravity_scale = 0.0
 script = ExtResource("1_xcfou")
 
@@ -23,9 +24,10 @@ script = ExtResource("1_xcfou")
 shape = SubResource("CapsuleShape2D_5a0b6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.9073486e-06, 1.9073486e-06)
-scale = Vector2(0.31249997, 0.5625)
-texture = ExtResource("2_ylelw")
+texture_filter = 1
+position = Vector2(-1, 16)
+scale = Vector2(1.1333333, 2.0400004)
+texture = ExtResource("2_36es6")
 
 [node name="mouse_collision" type="Area2D" parent="."]
 

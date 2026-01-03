@@ -1,21 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkhwetnfuxlmh"]
+[gd_scene load_steps=6 format=3 uid="uid://dkhwetnfuxlmh"]
 
 [ext_resource type="PackedScene" uid="uid://dwl51glne5y07" path="res://scenes/mouse_node.tscn" id="1_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://dldpvh3xlydmt" path="res://scenes/piolet.tscn" id="2_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://cuavcnbx8t6p" path="res://scenes/character_center.tscn" id="3_6uqi0"]
-[ext_resource type="PackedScene" uid="uid://px1xiu4f1tbr" path="res://scenes/terrain.tscn" id="4_74lek"]
+[ext_resource type="PackedScene" uid="uid://bk2bltekpub8b" path="res://scenes/gun.tscn" id="4_74lek"]
+[ext_resource type="Texture2D" uid="uid://iklopryyrjju" path="res://sprites/hielo.png" id="5_j5jx5"]
 
 [node name="test" type="Node2D"]
 
 [node name="mouse_node" parent="." instance=ExtResource("1_8uh7m")]
 
 [node name="piolet" parent="." instance=ExtResource("2_6uqi0")]
-position = Vector2(290, 333)
+position = Vector2(300, 288)
+direction = -1
 
 [node name="character_center" parent="." instance=ExtResource("3_6uqi0")]
 position = Vector2(363, 394)
 
 [node name="piolet2" parent="." instance=ExtResource("2_6uqi0")]
-position = Vector2(439, 321)
+position = Vector2(420, 282)
+direction = 1
 
-[node name="terrain" parent="." instance=ExtResource("4_74lek")]
+[node name="Gun" parent="." instance=ExtResource("4_74lek")]
+position = Vector2(362, 371)
+
+[node name="Hielo" type="Sprite2D" parent="."]
+z_index = -6
+texture_filter = 1
+position = Vector2(355, 310)
+texture = ExtResource("5_j5jx5")
